@@ -18,5 +18,8 @@ class Env
                 if (found != e->table->end()) return &(found->second);
                 else return nullptr;
             }
+            return nullptr;
         }
 };
+
+Env* envBegin = new Env(0);

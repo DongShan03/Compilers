@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <fstream>
 #include <unordered_map>
 #include "Word.h"
 #include "Type.h"
@@ -27,8 +28,7 @@ class Lexer
             reserve( TypeConst::Char );
             reserve( TypeConst::Bool );
         }
-
-        void readch() {peek = std::cin.get();}
+        void readch() { peek = std::cin.get(); std::cout << peek << ""; }
         bool readch(char c)
         {
             readch();

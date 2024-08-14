@@ -9,7 +9,7 @@ class Expr : public Node
     public:
         Token op;
         Type type;
-        Expr(Token tok, Type p) : op(tok), type(p) {}
+        Expr(Token tok = Token(), Type p = Type()) : op(tok), type(p) {}
         Expr gen() {return *this;}
         Expr reduce() {return *this;}
         void jumping(int t, int f) { emitjumps(toString(), t, f); }
